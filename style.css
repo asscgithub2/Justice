@@ -1,0 +1,605 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Shippori+Mincho:wght@500;600;700&display=swap');
+
+:root {
+    --g: #355b3e;
+    --gd: #24452e;
+    --soft: #edf2e9;
+    --cream: #faf8f1;
+    --ink: #2c3029;
+    --muted: #777b70
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.8
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+header {
+    min-height: 78px;
+    padding: 14px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--g);
+    line-height: 1.2
+}
+
+.logo small {
+    display: block;
+    font-size: 9px;
+    letter-spacing: .18em
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+    font-size: 13px
+}
+
+.bar {
+    padding: 7px;
+    text-align: center;
+    background: var(--g);
+    color: white;
+    font-size: 12px;
+    letter-spacing: .08em
+}
+
+.intro {
+    text-align: center;
+    padding: 55px 18px 38px;
+    background: var(--cream)
+}
+
+.eyebrow {
+    color: #7c936c;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .2em
+}
+
+h1,
+h2 {
+    font-family: 'Shippori Mincho', serif;
+    line-height: 1.45
+}
+
+h1 {
+    font-size: clamp(31px, 4vw, 47px);
+    color: var(--gd);
+    margin: 10px 0
+}
+
+h2 {
+    color: var(--gd)
+}
+
+.intro>p:last-child {
+    font-size: 13px;
+    color: var(--muted)
+}
+
+.wrap {
+    width: min(1050px, 90%);
+    margin: 42px auto
+}
+
+.roles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    max-width: 850px;
+    margin: auto
+}
+
+.role {
+    padding: 34px 28px;
+    text-align: center;
+    border: 1px solid #e7ebe3;
+    box-shadow: 0 8px 28px #2a3f2a0d
+}
+
+.role:hover {
+    transform: translateY(-2px)
+}
+
+.emoji {
+    font-size: 52px
+}
+
+.role h2 {
+    margin: 4px 0
+}
+
+.role p:not(.eyebrow) {
+    min-height: 48px;
+    color: var(--muted);
+    font-size: 13px
+}
+
+.btn {
+    display: inline-block;
+    border: 0;
+    border-radius: 3px;
+    background: var(--g);
+    color: white;
+    padding: 12px 22px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.btn:hover {
+    background: var(--gd)
+}
+
+.btn.light {
+    background: white;
+    color: var(--g);
+    border: 1px solid #dfe4dc
+}
+
+.note {
+    text-align: center;
+    color: #888;
+    font-size: 11px;
+    margin: 28px 0
+}
+
+.formwrap {
+    width: min(700px, 90%);
+    margin: 35px auto 65px
+}
+
+.notice {
+    padding: 13px 16px;
+    background: var(--soft);
+    border-left: 3px solid #829a75;
+    color: var(--gd);
+    font-size: 12px;
+    margin-bottom: 20px
+}
+
+.panel {
+    padding: clamp(22px, 4vw, 38px);
+    border: 1px solid #e9ece5;
+    box-shadow: 0 8px 28px #2a3f2a0d
+}
+
+.panel label {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #394b39
+}
+
+.panel label b {
+    color: #bd6840;
+    font-size: 10px;
+    margin-left: 5px
+}
+
+.panel input,
+.panel textarea {
+    display: block;
+    width: 100%;
+    margin-top: 7px;
+    padding: 12px;
+    border: 1px solid #dfe4dc;
+    border-radius: 3px;
+    font: inherit;
+    font-size: 14px
+}
+
+.panel textarea {
+    min-height: 110px;
+    resize: vertical
+}
+
+.panel input:focus,
+.panel textarea:focus {
+    outline: 2px solid #c6d5be
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap
+}
+
+.listhead {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 15px;
+    margin-bottom: 24px
+}
+
+.listhead h2 {
+    margin: 0
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px
+}
+
+.product {
+    border: 1px solid #eceee8
+}
+
+.photo {
+    height: 190px;
+    display: grid;
+    place-items: center;
+    font-size: 60px;
+    background: linear-gradient(135deg, #e7eee0, #f7f4e9)
+}
+
+.info {
+    padding: 17px
+}
+
+.category {
+    font-size: 11px;
+    color: #8a9b7d;
+    margin: 0
+}
+
+.info h3 {
+    font-size: 16px;
+    margin: 5px 0
+}
+
+.memo {
+    font-size: 12px;
+    color: var(--muted);
+    white-space: pre-wrap;
+    min-height: 30px
+}
+
+.date {
+    font-size: 11px;
+    color: var(--muted)
+}
+
+.price {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--gd);
+    margin-top: 10px
+}
+
+.empty {
+    text-align: center;
+    grid-column: 1/-1;
+    padding: 40px 18px;
+    border: 1px dashed #cbd5c5;
+    color: var(--muted)
+}
+
+.empty strong {
+    display: block;
+    color: var(--gd);
+    font-size: 17px
+}
+
+footer {
+    margin-top: 65px;
+    padding: 30px;
+    text-align: center;
+    background: #202f24;
+    color: #d8dfd5;
+    font-size: 12px
+}
+
+footer p {
+    margin: 5px;
+    color: #b9c3b7
+}
+
+@media(max-width:700px) {
+    header {
+        flex-wrap: wrap
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        overflow: auto;
+        white-space: nowrap
+    }
+
+    .roles,
+    .products {
+        grid-template-columns: 1fr
+    }
+
+    .role {
+        padding: 27px 20px
+    }
+
+    .listhead {
+        align-items: center
+    }
+
+    .actions .btn {
+        flex: 1;
+        text-align: center
+    }
+}
+/* カートボタン・購入ボタン・モーダル用スタイル */
+nav { align-items: center; }
+.cart-nav-btn {
+  background: var(--soft);
+  color: var(--gd);
+  border: 1px solid #cbd5c5;
+  border-radius: 20px;
+  padding: 7px 14px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.cart-nav-btn:hover { background: #dfe8d8; }
+
+.price-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #f0f2ed;
+}
+.price-row .price { margin-top: 0; }
+.buy-btn { padding: 9px 14px; font-size: 12px; }
+.buy-btn:disabled { background: #6b8772; cursor: default; }
+
+.modal[hidden] { display: none; }
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(32, 47, 36, 0.5);
+}
+.modal-panel {
+  position: relative;
+  width: min(540px, 100%);
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: var(--cream);
+  border-bottom: 1px solid #e7ebe3;
+}
+.modal-head h2 { margin: 0; font-size: 18px; }
+.close-btn {
+  background: none;
+  border: 0;
+  font-size: 18px;
+  color: var(--muted);
+  cursor: pointer;
+}
+.cart-items {
+  padding: 16px 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+.cart-empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 28px 0;
+  font-size: 13px;
+}
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eceee8;
+}
+.cart-item-info { display: flex; flex-direction: column; font-size: 13px; }
+.cart-item-info span { color: var(--muted); font-size: 12px; }
+.cart-item-ctrl { display: flex; align-items: center; gap: 6px; font-size: 13px; }
+.qty-btn {
+  width: 26px;
+  height: 26px;
+  border: 1px solid #dfe4dc;
+  background: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.del-btn {
+  margin-left: 6px;
+  background: none;
+  border: 0;
+  color: #bd6840;
+  font-size: 12px;
+  cursor: pointer;
+}
+.cart-footer {
+  padding: 16px 20px;
+  background: var(--cream);
+  border-top: 1px solid #e7ebe3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.cart-total { font-size: 14px; }
+.cart-total strong { font-size: 20px; color: var(--gd); }
+/* 販売方法の選択ボタン（seller.html） */
+.field-group { margin-bottom: 22px; }
+.field-label { display: block; margin-bottom: 8px; font-size: 13px; font-weight: 700; color: #394b39; }
+.field-label b { color: #bd6840; font-size: 10px; margin-left: 5px; }
+.sale-type-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.panel .type-option {
+  margin-bottom: 0;
+  cursor: pointer;
+}
+.type-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.type-card {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 13px 14px;
+  border: 1.5px solid #dfe4dc;
+  border-radius: 4px;
+  background: white;
+  transition: border-color 0.15s, background 0.15s;
+}
+.type-card strong { font-size: 13px; color: var(--ink); }
+.type-card small { font-size: 11px; font-weight: 400; color: var(--muted); }
+.type-option input[type="radio"]:checked + .type-card {
+  border-color: var(--g);
+  background: var(--soft);
+}
+.type-option input[type="radio"]:checked + .type-card strong {
+  color: var(--gd);
+}
+
+/* 購入者画面のステータスバッジ＆予約ボタン（buyer.html） */
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+.badge.now {
+  background: var(--soft);
+  color: var(--gd);
+}
+.badge.preorder {
+  background: #fdf0e6;
+  color: #b85d2b;
+}
+.preorder-btn {
+  background: #b85d2b;
+}
+.preorder-btn:hover {
+  background: #994a1f;
+}
+
+@media (max-width: 700px) {
+  .sale-type-options { grid-template-columns: 1fr; }
+}
+/* 出品中の商品管理・削除リスト（seller.html） */
+.manage-section {
+  margin-top: 48px;
+}
+.manage-head {
+  margin-bottom: 16px;
+}
+.manage-head .eyebrow {
+  margin: 0;
+}
+.manage-head h2 {
+  margin: 4px 0 0;
+  font-size: 22px;
+}
+.manage-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.manage-empty {
+  text-align: center;
+  padding: 28px 16px;
+  border: 1px dashed #cbd5c5;
+  color: var(--muted);
+  font-size: 13px;
+}
+.manage-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: white;
+  border: 1px solid #e9ece5;
+  box-shadow: 0 4px 16px #2a3f2a08;
+}
+.manage-title {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.manage-title strong {
+  font-size: 15px;
+  color: var(--ink);
+}
+.manage-meta {
+  margin: 5px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+.btn-delete {
+  background: white;
+  color: #bd6840;
+  border: 1px solid #e5c6b7;
+  border-radius: 3px;
+  padding: 8px 14px;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.btn-delete:hover {
+  background: #fdf0e6;
+  border-color: #bd6840;
+}
